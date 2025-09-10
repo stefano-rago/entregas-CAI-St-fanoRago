@@ -40,6 +40,7 @@
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { IDCaso, Empleado, Problema, TécnicoAsignado, TrabajoRealizado, Estado });
-            dataGridView1.Location = new Point(75, 75);
+            dataGridView1.Location = new Point(75, 120);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(643, 64);
             dataGridView1.TabIndex = 0;
@@ -86,7 +87,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(75, 369);
+            button1.Location = new Point(75, 389);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
@@ -96,7 +97,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(75, 190);
+            textBox1.Location = new Point(75, 238);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(643, 127);
@@ -105,7 +106,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(191, 369);
+            button2.Location = new Point(192, 389);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 3;
@@ -115,7 +116,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(75, 32);
+            label1.Location = new Point(75, 76);
             label1.Name = "label1";
             label1.Size = new Size(93, 15);
             label1.TabIndex = 4;
@@ -124,17 +125,26 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(75, 160);
+            label2.Location = new Point(75, 202);
             label2.Name = "label2";
             label2.Size = new Size(124, 15);
             label2.TabIndex = 5;
             label2.Text = "Observaciones finales ";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(75, 27);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 6;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // FormCerrarCaso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dateTimePicker1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button2);
@@ -162,5 +172,6 @@
         private Button button2;
         private Label label1;
         private Label label2;
+        private DateTimePicker dateTimePicker1;
     }
 }
